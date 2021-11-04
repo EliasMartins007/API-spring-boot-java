@@ -31,17 +31,6 @@ public class GreetingsController {
 	@Autowired /* IC/CD/CDI -Injeção de dependencia */
 	private UsuarioRepository usuarioRepository;
 
-	/**
-	 *
-	 * @param name the name to greet
-	 * @return greeting text
-	 */
-	@RequestMapping(value = "/{name}", method = RequestMethod.GET)
-	@ResponseStatus(HttpStatus.OK)
-	public String greetingText(@PathVariable String name) {
-		return "Curso Spring Boot API:  " + name + "!";
-	}
-
 	//
 	// gravar no banco
 	@RequestMapping(value = "/olamundo/{nome}", method = RequestMethod.GET)

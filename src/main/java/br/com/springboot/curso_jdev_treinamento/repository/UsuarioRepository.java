@@ -11,10 +11,8 @@ import br.com.springboot.curso_jdev_treinamento.model.Usuario;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
-	@Query(value = "Select u from Usuario u where upper(trim(u.nome)) like %?1%") /*
-																					 * trim para retirar espaço vindo do
-																					 * BD
-																					 */
+	@Query(value = "Select u from Usuario u where upper(trim(u.nome)) like %?1%")
+
 	List<Usuario> buscaPorNome(String name);// para poder pesquisar por nome foi implementado essa linha 02/11/2021
 
 }

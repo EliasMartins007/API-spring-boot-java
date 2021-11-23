@@ -49,7 +49,7 @@ public class GreetingsController {
 	@GetMapping(value = "listatodos") /* primeiro metodo da API */
 	@ResponseBody /* retorna os dados para o corpo da resposta */
 	public ResponseEntity<List<Usuario>> listaUsuario() {
-		List<Usuario> usuarios = usuarioRepository.findAll();/* execua a consulta no banco de dados */
+		List<Usuario> usuarios = usuarioRepository.findAll();/* executa a consulta no banco de dados */
 		//
 		return new ResponseEntity<List<Usuario>>(usuarios, HttpStatus.OK);/* retornaria a lista (JSON) */
 	}
